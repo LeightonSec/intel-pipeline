@@ -3,6 +3,7 @@ import logging
 from datetime import datetime
 from dotenv import load_dotenv
 from fetcher import fetch_all_feeds, filter_by_keywords
+from deduplicator import filter_new_items
 from summariser import summarise_all
 
 load_dotenv()
@@ -48,6 +49,7 @@ def generate_report(summaries: dict, period: str) -> str:
         "security": "🔒 Security News",
         "ai_research": "🤖 AI Research",
         "bsv_bastion": "⛓️ BSV & Bastion",
+        "cve": "🚨 CVE & Vulnerabilities",
         "custom": "🎯 Custom Topics"
     }
 
@@ -94,8 +96,9 @@ def run_pipeline(period: str = "AM"):
     filtered_items = {}
     for category, items in raw_items.items():
         filtered = filter_by_keywords(items, USER_KEYWORDS)
+        filtered = filter_new_items(filtered)
         filtered_items[category] = filtered
-        logger.info(f"{category}: {len(items)} fetched → {len(filtered)} relevant")
+        logger.info(f"{category}: {len(items)} fetched → {len(filtered)} new & relevant")
 
     # Summarise
     logger.info("Summarising with Claude API...")

@@ -22,7 +22,11 @@ WHITELISTED_DOMAINS = [
     "securityweek.com",
     "coingeek.com",
     "bitcoinsv.io",
-    "bsvblockchain.org"
+    "bsvblockchain.org",
+    "cisa.gov",
+    "us-cert.cisa.gov",
+    "exploit-db.com",
+    "nvd.nist.gov"
 ]
 
 # RSS feed sources
@@ -41,6 +45,11 @@ RSS_FEEDS = {
     "bsv_bastion": [
         "https://coingeek.com/feed/",
         "https://bitcoinsv.io/feed/"
+    ],
+    "cve": [
+        "https://www.cisa.gov/uscert/ncas/alerts.xml",
+        "https://www.cisa.gov/uscert/ncas/current-activity.xml",
+        "https://www.exploit-db.com/rss.xml"
     ]
 }
 

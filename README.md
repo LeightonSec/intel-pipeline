@@ -4,6 +4,19 @@ A personal intelligence pipeline that automatically monitors security news, AI r
 
 ---
 
+## Skills Demonstrated
+
+| Area | Detail |
+|---|---|
+| **Python** | Modular design, file I/O, scheduling, API integration, RSS parsing |
+| **Security Engineering** | Domain whitelisting, prompt injection hardening, rate limiting, secrets management |
+| **Threat Intelligence** | Multi-source ingestion, keyword filtering, CVE/vulnerability feed monitoring |
+| **AI Integration** | Claude API (Anthropic) for automated summarisation with hardened system prompts |
+| **Automation** | Launchd scheduling, deduplication logic, Obsidian vault integration |
+| **Secure Coding** | No hardcoded secrets, `.gitignore` hygiene, input validation, outbound-only design |
+
+---
+
 ## What It Does
 
 Staying on top of the threat landscape, AI developments and niche research areas is a full time job. This tool automates that process — fetching from trusted sources every 12 hours, filtering by relevance, summarising with Claude AI, and dropping a structured report into your Obsidian vault inbox before you start your day.
@@ -85,13 +98,17 @@ Edit `pipeline.py` to customise:
 ## Project Structure
 
 intel-pipeline/
-├── pipeline.py      # Main orchestrator
-├── fetcher.py       # RSS ingestion, whitelist, rate limiting
-├── summariser.py    # Claude API summarisation
-├── scheduler.py     # Twice daily automation
+├── pipeline.py        # Main orchestrator
+├── fetcher.py         # RSS ingestion, whitelist, rate limiting
+├── summariser.py      # Claude API summarisation
+├── deduplicator.py    # Seen URL tracking, prevents duplicate reports
+├── scheduler.py       # Twice daily automation
+├── config/
+│   └── sources.yaml   # Feed source configuration
 ├── requirements.txt
-├── reports/         # Local report storage (gitignored)
-└── .env             # API key (never committed)
+├── reports/           # Local report storage (gitignored)
+├── logs/              # Runtime logs and seen URL cache (gitignored)
+└── .env               # API key (never committed)
 
 ---
 
@@ -99,7 +116,7 @@ intel-pipeline/
 
 - [ ] Web dashboard to view reports in browser
 - [ ] Slack/email alert for critical security items
-- [ ] CVE feed integration
+- [x] CVE feed integration — CISA alerts, CISA current activity, Exploit-DB
 - [ ] GitHub trending repos monitoring
 - [ ] Custom source addition via config file
 
