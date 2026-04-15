@@ -1,0 +1,1191 @@
+2026-04-15 17:40:07,327 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:40:07,327 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:40:07,327 - INFO - Running initial pipeline now...
+2026-04-15 17:40:07,327 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:40:07,327 - INFO - Fetching feeds...
+2026-04-15 17:40:07,327 - INFO - Fetching category: security
+2026-04-15 17:40:07,327 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:40:09,850 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:40:12,730 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:40:15,122 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:40:17,958 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:40:21,072 - INFO - Fetched 50 items for security
+2026-04-15 17:40:21,074 - INFO - Fetching category: ai_research
+2026-04-15 17:40:21,074 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:40:24,455 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:40:27,271 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:40:27,272 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:40:27,272 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:40:29,675 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:40:32,451 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:40:32,451 - INFO - Filtering by keywords...
+2026-04-15 17:40:32,452 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:40:32,453 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:40:32,453 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:40:32,453 - INFO - Summarising with Claude API...
+2026-04-15 17:40:32,453 - INFO - Summarising security — 41 items
+2026-04-15 17:40:41,364 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:40:41,392 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:40:50,482 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:40:50,483 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:40:57,848 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:40:58,341 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:40:58,341 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:40:58,341 - INFO - Running initial pipeline now...
+2026-04-15 17:40:58,341 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:40:58,341 - INFO - Fetching feeds...
+2026-04-15 17:40:58,341 - INFO - Fetching category: security
+2026-04-15 17:40:58,341 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:41:00,823 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:41:03,597 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:41:05,963 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:41:08,755 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:41:11,422 - INFO - Fetched 50 items for security
+2026-04-15 17:41:11,422 - INFO - Fetching category: ai_research
+2026-04-15 17:41:11,422 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:41:14,527 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:41:17,459 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:41:17,459 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:41:17,460 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:41:19,912 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:41:29,655 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:41:29,655 - INFO - Filtering by keywords...
+2026-04-15 17:41:29,655 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:41:29,656 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:41:29,657 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:41:29,657 - INFO - Summarising with Claude API...
+2026-04-15 17:41:29,657 - INFO - Summarising security — 41 items
+2026-04-15 17:41:40,461 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:41:40,487 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:41:46,591 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:41:46,593 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:41:53,657 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:41:54,017 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:41:54,017 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:41:54,017 - INFO - Running initial pipeline now...
+2026-04-15 17:41:54,017 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:41:54,017 - INFO - Fetching feeds...
+2026-04-15 17:41:54,017 - INFO - Fetching category: security
+2026-04-15 17:41:54,017 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:41:56,497 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:41:59,364 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:42:01,746 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:42:04,764 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:42:07,441 - INFO - Fetched 50 items for security
+2026-04-15 17:42:07,441 - INFO - Fetching category: ai_research
+2026-04-15 17:42:07,442 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:42:10,619 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:42:13,381 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:42:13,381 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:42:13,381 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:42:15,831 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:42:18,618 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:42:18,618 - INFO - Filtering by keywords...
+2026-04-15 17:42:18,618 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:42:18,618 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:42:18,619 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:42:18,619 - INFO - Summarising with Claude API...
+2026-04-15 17:42:18,619 - INFO - Summarising security — 41 items
+2026-04-15 17:42:27,041 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:42:27,066 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:42:33,184 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:42:33,186 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:42:39,840 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:42:40,344 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:42:40,344 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:42:40,344 - INFO - Running initial pipeline now...
+2026-04-15 17:42:40,344 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:42:40,344 - INFO - Fetching feeds...
+2026-04-15 17:42:40,344 - INFO - Fetching category: security
+2026-04-15 17:42:40,344 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:42:42,897 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:42:45,675 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:42:48,049 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:42:51,814 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:42:54,431 - INFO - Fetched 50 items for security
+2026-04-15 17:42:54,432 - INFO - Fetching category: ai_research
+2026-04-15 17:42:54,432 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:42:57,609 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:43:00,510 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:43:00,510 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:43:00,511 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:43:02,814 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:43:05,481 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:43:05,481 - INFO - Filtering by keywords...
+2026-04-15 17:43:05,482 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:43:05,482 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:43:05,482 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:43:05,482 - INFO - Summarising with Claude API...
+2026-04-15 17:43:05,482 - INFO - Summarising security — 41 items
+2026-04-15 17:43:13,020 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:43:13,046 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:43:19,064 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:43:19,066 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:43:26,945 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:43:27,304 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:43:27,305 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:43:27,305 - INFO - Running initial pipeline now...
+2026-04-15 17:43:27,305 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:43:27,305 - INFO - Fetching feeds...
+2026-04-15 17:43:27,305 - INFO - Fetching category: security
+2026-04-15 17:43:27,305 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:43:29,780 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:43:32,719 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:43:35,115 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:43:37,859 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:43:40,531 - INFO - Fetched 50 items for security
+2026-04-15 17:43:40,532 - INFO - Fetching category: ai_research
+2026-04-15 17:43:40,532 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:43:43,695 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:43:46,603 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:43:46,603 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:43:46,604 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:43:48,981 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:43:51,603 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:43:51,604 - INFO - Filtering by keywords...
+2026-04-15 17:43:51,605 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:43:51,605 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:43:51,606 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:43:51,606 - INFO - Summarising with Claude API...
+2026-04-15 17:43:51,606 - INFO - Summarising security — 41 items
+2026-04-15 17:43:59,612 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:43:59,636 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:44:06,684 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:44:06,685 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:44:13,435 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:44:13,806 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:44:13,806 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:44:13,806 - INFO - Running initial pipeline now...
+2026-04-15 17:44:13,806 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:44:13,806 - INFO - Fetching feeds...
+2026-04-15 17:44:13,806 - INFO - Fetching category: security
+2026-04-15 17:44:13,806 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:44:16,261 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:44:18,898 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:44:21,232 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:44:24,008 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:44:26,623 - INFO - Fetched 50 items for security
+2026-04-15 17:44:26,623 - INFO - Fetching category: ai_research
+2026-04-15 17:44:26,623 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:44:29,706 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:44:32,517 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:44:32,518 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:44:32,518 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:44:34,897 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:44:37,625 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:44:37,626 - INFO - Filtering by keywords...
+2026-04-15 17:44:37,626 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:44:37,627 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:44:37,628 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:44:37,628 - INFO - Summarising with Claude API...
+2026-04-15 17:44:37,628 - INFO - Summarising security — 41 items
+2026-04-15 17:44:48,048 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:44:48,071 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:44:55,728 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:44:55,731 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:45:03,306 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:45:03,796 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:45:03,796 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:45:03,796 - INFO - Running initial pipeline now...
+2026-04-15 17:45:03,796 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:45:03,796 - INFO - Fetching feeds...
+2026-04-15 17:45:03,796 - INFO - Fetching category: security
+2026-04-15 17:45:03,796 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:45:06,368 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:45:09,040 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:45:11,399 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:45:14,423 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:45:17,106 - INFO - Fetched 50 items for security
+2026-04-15 17:45:17,107 - INFO - Fetching category: ai_research
+2026-04-15 17:45:17,107 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:45:20,317 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:45:22,999 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:45:22,999 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:45:22,999 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:45:25,333 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:45:27,915 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:45:27,916 - INFO - Filtering by keywords...
+2026-04-15 17:45:27,917 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:45:27,918 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:45:27,918 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:45:27,918 - INFO - Summarising with Claude API...
+2026-04-15 17:45:27,918 - INFO - Summarising security — 41 items
+2026-04-15 17:45:36,588 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:45:36,614 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:45:43,857 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:45:43,859 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:45:50,413 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:45:50,778 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:45:50,778 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:45:50,778 - INFO - Running initial pipeline now...
+2026-04-15 17:45:50,778 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:45:50,778 - INFO - Fetching feeds...
+2026-04-15 17:45:50,778 - INFO - Fetching category: security
+2026-04-15 17:45:50,778 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:45:53,463 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:45:56,216 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:45:58,682 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:46:01,620 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:46:04,472 - INFO - Fetched 50 items for security
+2026-04-15 17:46:04,472 - INFO - Fetching category: ai_research
+2026-04-15 17:46:04,473 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:46:07,627 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:46:10,509 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:46:10,509 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:46:10,509 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:46:12,883 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:46:15,559 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:46:15,560 - INFO - Filtering by keywords...
+2026-04-15 17:46:15,561 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:46:15,562 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:46:15,562 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:46:15,562 - INFO - Summarising with Claude API...
+2026-04-15 17:46:15,562 - INFO - Summarising security — 41 items
+2026-04-15 17:46:24,819 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:46:24,845 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:46:29,835 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:46:29,837 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:46:37,581 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:46:37,946 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:46:37,946 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:46:37,946 - INFO - Running initial pipeline now...
+2026-04-15 17:46:37,946 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:46:37,946 - INFO - Fetching feeds...
+2026-04-15 17:46:37,946 - INFO - Fetching category: security
+2026-04-15 17:46:37,946 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:46:40,660 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:46:43,552 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:46:45,907 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:46:48,736 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:46:51,430 - INFO - Fetched 50 items for security
+2026-04-15 17:46:51,431 - INFO - Fetching category: ai_research
+2026-04-15 17:46:51,431 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:46:54,700 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:46:57,534 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:46:57,534 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:46:57,534 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:46:59,933 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:47:02,683 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:47:02,683 - INFO - Filtering by keywords...
+2026-04-15 17:47:02,684 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:47:02,685 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:47:02,685 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:47:02,685 - INFO - Summarising with Claude API...
+2026-04-15 17:47:02,685 - INFO - Summarising security — 41 items
+2026-04-15 17:47:12,852 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:47:12,878 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:47:22,163 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:47:22,165 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:47:28,409 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:47:28,771 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:47:28,771 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:47:28,771 - INFO - Running initial pipeline now...
+2026-04-15 17:47:28,771 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:47:28,771 - INFO - Fetching feeds...
+2026-04-15 17:47:28,771 - INFO - Fetching category: security
+2026-04-15 17:47:28,771 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:47:31,342 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:47:34,179 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:47:36,500 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:47:39,150 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:47:41,824 - INFO - Fetched 50 items for security
+2026-04-15 17:47:41,825 - INFO - Fetching category: ai_research
+2026-04-15 17:47:41,825 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:47:45,029 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:47:47,945 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:47:47,945 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:47:47,945 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:47:50,267 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:47:53,019 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:47:53,019 - INFO - Filtering by keywords...
+2026-04-15 17:47:53,020 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:47:53,021 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:47:53,021 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:47:53,022 - INFO - Summarising with Claude API...
+2026-04-15 17:47:53,022 - INFO - Summarising security — 41 items
+2026-04-15 17:48:00,872 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:48:00,899 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:48:07,841 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:48:07,843 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:48:14,804 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:48:15,170 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:48:15,170 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:48:15,170 - INFO - Running initial pipeline now...
+2026-04-15 17:48:15,170 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:48:15,170 - INFO - Fetching feeds...
+2026-04-15 17:48:15,170 - INFO - Fetching category: security
+2026-04-15 17:48:15,170 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:48:17,793 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:48:20,617 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:48:22,930 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:48:25,812 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:48:28,530 - INFO - Fetched 50 items for security
+2026-04-15 17:48:28,530 - INFO - Fetching category: ai_research
+2026-04-15 17:48:28,530 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:48:31,747 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:48:34,647 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:48:34,647 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:48:34,647 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:48:37,126 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:48:39,980 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:48:39,980 - INFO - Filtering by keywords...
+2026-04-15 17:48:39,981 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:48:39,981 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:48:39,981 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:48:39,981 - INFO - Summarising with Claude API...
+2026-04-15 17:48:39,981 - INFO - Summarising security — 41 items
+2026-04-15 17:48:50,788 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:48:50,814 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:48:58,318 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:48:58,320 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:49:06,715 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:49:07,204 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:49:07,204 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:49:07,204 - INFO - Running initial pipeline now...
+2026-04-15 17:49:07,204 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:49:07,204 - INFO - Fetching feeds...
+2026-04-15 17:49:07,204 - INFO - Fetching category: security
+2026-04-15 17:49:07,204 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:49:09,817 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:49:12,721 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:49:15,192 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:49:18,314 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:49:20,910 - INFO - Fetched 50 items for security
+2026-04-15 17:49:20,910 - INFO - Fetching category: ai_research
+2026-04-15 17:49:20,910 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:49:24,065 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:49:26,874 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:49:26,874 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:49:26,874 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:49:29,263 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:49:31,911 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:49:31,911 - INFO - Filtering by keywords...
+2026-04-15 17:49:31,912 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:49:31,913 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:49:31,913 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:49:31,913 - INFO - Summarising with Claude API...
+2026-04-15 17:49:31,913 - INFO - Summarising security — 41 items
+2026-04-15 17:49:43,025 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:49:43,052 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:49:48,597 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:49:48,599 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:49:55,585 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:49:55,944 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:49:55,944 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:49:55,944 - INFO - Running initial pipeline now...
+2026-04-15 17:49:55,944 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:49:55,944 - INFO - Fetching feeds...
+2026-04-15 17:49:55,944 - INFO - Fetching category: security
+2026-04-15 17:49:55,944 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:49:58,542 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:50:01,404 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:50:03,772 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:50:08,314 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:50:11,309 - INFO - Fetched 50 items for security
+2026-04-15 17:50:11,309 - INFO - Fetching category: ai_research
+2026-04-15 17:50:11,310 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:50:14,545 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:50:17,424 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:50:17,424 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:50:17,424 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:50:19,734 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:50:22,459 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:50:22,459 - INFO - Filtering by keywords...
+2026-04-15 17:50:22,459 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:50:22,460 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:50:22,460 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:50:22,460 - INFO - Summarising with Claude API...
+2026-04-15 17:50:22,460 - INFO - Summarising security — 41 items
+2026-04-15 17:50:30,471 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:50:30,497 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:50:36,736 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:50:36,738 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:50:41,751 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:50:42,119 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:50:42,119 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:50:42,119 - INFO - Running initial pipeline now...
+2026-04-15 17:50:42,119 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:50:42,119 - INFO - Fetching feeds...
+2026-04-15 17:50:42,119 - INFO - Fetching category: security
+2026-04-15 17:50:42,119 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:50:44,697 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:50:47,375 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:50:49,705 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:50:57,452 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:51:00,190 - INFO - Fetched 50 items for security
+2026-04-15 17:51:00,190 - INFO - Fetching category: ai_research
+2026-04-15 17:51:00,190 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:51:03,289 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:51:06,188 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:51:06,189 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:51:06,189 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:51:08,602 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:51:11,249 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:51:11,250 - INFO - Filtering by keywords...
+2026-04-15 17:51:11,250 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:51:11,251 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:51:11,251 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:51:11,251 - INFO - Summarising with Claude API...
+2026-04-15 17:51:11,251 - INFO - Summarising security — 41 items
+2026-04-15 17:51:20,155 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:51:20,179 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:51:31,424 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:51:31,425 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:51:36,741 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:51:37,195 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:51:37,195 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:51:37,195 - INFO - Running initial pipeline now...
+2026-04-15 17:51:37,195 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:51:37,195 - INFO - Fetching feeds...
+2026-04-15 17:51:37,195 - INFO - Fetching category: security
+2026-04-15 17:51:37,195 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:51:39,726 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:51:42,458 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:51:44,759 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:51:47,629 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:51:53,226 - INFO - Fetched 50 items for security
+2026-04-15 17:51:53,226 - INFO - Fetching category: ai_research
+2026-04-15 17:51:53,226 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:51:56,477 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:51:59,313 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:51:59,313 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:51:59,313 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:52:01,700 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:52:04,342 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:52:04,343 - INFO - Filtering by keywords...
+2026-04-15 17:52:04,344 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:52:04,345 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:52:04,345 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:52:04,345 - INFO - Summarising with Claude API...
+2026-04-15 17:52:04,345 - INFO - Summarising security — 41 items
+2026-04-15 17:52:12,276 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:52:12,301 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:52:18,726 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:52:18,728 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:52:26,004 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:52:26,486 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:52:26,486 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:52:26,486 - INFO - Running initial pipeline now...
+2026-04-15 17:52:26,486 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:52:26,486 - INFO - Fetching feeds...
+2026-04-15 17:52:26,486 - INFO - Fetching category: security
+2026-04-15 17:52:26,486 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:52:29,026 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:52:31,893 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:52:34,176 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:52:37,692 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:52:40,436 - INFO - Fetched 50 items for security
+2026-04-15 17:52:40,436 - INFO - Fetching category: ai_research
+2026-04-15 17:52:40,436 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:52:43,577 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:52:46,432 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:52:46,432 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:52:46,433 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:52:48,817 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:52:51,442 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:52:51,442 - INFO - Filtering by keywords...
+2026-04-15 17:52:51,443 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:52:51,444 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:52:51,444 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:52:51,444 - INFO - Summarising with Claude API...
+2026-04-15 17:52:51,444 - INFO - Summarising security — 41 items
+2026-04-15 17:53:02,968 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:53:02,995 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:53:09,111 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:53:09,113 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:53:15,150 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:53:15,507 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:53:15,507 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:53:15,507 - INFO - Running initial pipeline now...
+2026-04-15 17:53:15,507 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:53:15,507 - INFO - Fetching feeds...
+2026-04-15 17:53:15,507 - INFO - Fetching category: security
+2026-04-15 17:53:15,507 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:53:18,144 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:53:20,995 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:53:23,351 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:53:26,163 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:53:28,879 - INFO - Fetched 50 items for security
+2026-04-15 17:53:28,879 - INFO - Fetching category: ai_research
+2026-04-15 17:53:28,880 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:53:32,011 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:53:34,916 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:53:34,916 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:53:34,917 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:53:37,278 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:53:39,910 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:53:39,910 - INFO - Filtering by keywords...
+2026-04-15 17:53:39,911 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:53:39,912 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:53:39,912 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:53:39,912 - INFO - Summarising with Claude API...
+2026-04-15 17:53:39,912 - INFO - Summarising security — 41 items
+2026-04-15 17:53:49,874 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:53:49,898 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:53:58,364 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:53:58,366 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:54:05,122 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:54:05,489 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:54:05,489 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:54:05,489 - INFO - Running initial pipeline now...
+2026-04-15 17:54:05,489 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:54:05,489 - INFO - Fetching feeds...
+2026-04-15 17:54:05,489 - INFO - Fetching category: security
+2026-04-15 17:54:05,489 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:54:08,066 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:54:10,952 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:54:13,227 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:54:16,032 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:54:18,695 - INFO - Fetched 50 items for security
+2026-04-15 17:54:18,695 - INFO - Fetching category: ai_research
+2026-04-15 17:54:18,695 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:54:21,857 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:54:24,747 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:54:24,747 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:54:24,747 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:54:27,149 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:54:29,760 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:54:29,761 - INFO - Filtering by keywords...
+2026-04-15 17:54:29,762 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:54:29,763 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:54:29,763 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:54:29,763 - INFO - Summarising with Claude API...
+2026-04-15 17:54:29,763 - INFO - Summarising security — 41 items
+2026-04-15 17:54:37,380 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:54:37,407 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:54:45,161 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:54:45,163 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:54:52,131 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:54:52,486 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:54:52,486 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:54:52,486 - INFO - Running initial pipeline now...
+2026-04-15 17:54:52,486 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:54:52,486 - INFO - Fetching feeds...
+2026-04-15 17:54:52,487 - INFO - Fetching category: security
+2026-04-15 17:54:52,487 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:54:54,993 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:54:57,744 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:55:00,011 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:55:02,935 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:55:05,990 - INFO - Fetched 50 items for security
+2026-04-15 17:55:05,990 - INFO - Fetching category: ai_research
+2026-04-15 17:55:05,991 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:55:09,175 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:55:12,044 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:55:12,044 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:55:12,044 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:55:14,511 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:55:17,298 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:55:17,298 - INFO - Filtering by keywords...
+2026-04-15 17:55:17,299 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:55:17,300 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:55:17,300 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:55:17,300 - INFO - Summarising with Claude API...
+2026-04-15 17:55:17,301 - INFO - Summarising security — 41 items
+2026-04-15 17:55:26,476 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:55:26,502 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:55:32,266 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:55:32,268 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:55:38,929 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:55:39,288 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:55:39,288 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:55:39,288 - INFO - Running initial pipeline now...
+2026-04-15 17:55:39,288 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:55:39,288 - INFO - Fetching feeds...
+2026-04-15 17:55:39,288 - INFO - Fetching category: security
+2026-04-15 17:55:39,288 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:55:41,713 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:55:44,328 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:55:46,695 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:55:49,519 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:55:52,161 - INFO - Fetched 50 items for security
+2026-04-15 17:55:52,162 - INFO - Fetching category: ai_research
+2026-04-15 17:55:52,162 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:55:55,232 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:55:58,113 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:55:58,113 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:55:58,113 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:56:00,564 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:56:03,529 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:56:03,529 - INFO - Filtering by keywords...
+2026-04-15 17:56:03,530 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:56:03,531 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:56:03,532 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:56:03,532 - INFO - Summarising with Claude API...
+2026-04-15 17:56:03,532 - INFO - Summarising security — 41 items
+2026-04-15 17:56:15,592 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:56:17,858 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:56:24,927 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:56:24,929 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:56:30,434 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:56:30,791 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:56:30,791 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:56:30,791 - INFO - Running initial pipeline now...
+2026-04-15 17:56:30,791 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:56:30,791 - INFO - Fetching feeds...
+2026-04-15 17:56:30,791 - INFO - Fetching category: security
+2026-04-15 17:56:30,791 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:56:33,276 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:56:35,936 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:56:38,360 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:56:40,995 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:56:43,612 - INFO - Fetched 50 items for security
+2026-04-15 17:56:43,612 - INFO - Fetching category: ai_research
+2026-04-15 17:56:43,612 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:56:46,806 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:56:49,695 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:56:49,695 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:56:49,695 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:56:52,079 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:57:01,795 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:57:01,796 - INFO - Filtering by keywords...
+2026-04-15 17:57:01,797 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:57:01,798 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:57:01,798 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:57:01,798 - INFO - Summarising with Claude API...
+2026-04-15 17:57:01,798 - INFO - Summarising security — 41 items
+2026-04-15 17:57:11,495 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:57:11,521 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:57:20,300 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:57:20,303 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:57:27,578 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:57:27,940 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:57:27,940 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:57:27,940 - INFO - Running initial pipeline now...
+2026-04-15 17:57:27,940 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:57:27,940 - INFO - Fetching feeds...
+2026-04-15 17:57:27,940 - INFO - Fetching category: security
+2026-04-15 17:57:27,940 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:57:30,481 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:57:33,396 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:57:35,802 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:57:38,587 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:57:41,315 - INFO - Fetched 50 items for security
+2026-04-15 17:57:41,315 - INFO - Fetching category: ai_research
+2026-04-15 17:57:41,315 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:57:44,646 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:57:47,409 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:57:47,409 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:57:47,409 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:57:53,880 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:57:56,756 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:57:56,757 - INFO - Filtering by keywords...
+2026-04-15 17:57:56,758 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:57:56,759 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:57:56,759 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:57:56,759 - INFO - Summarising with Claude API...
+2026-04-15 17:57:56,759 - INFO - Summarising security — 41 items
+2026-04-15 17:58:03,516 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:58:03,542 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:58:09,249 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:58:09,251 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:58:16,219 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:58:16,692 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:58:16,692 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:58:16,692 - INFO - Running initial pipeline now...
+2026-04-15 17:58:16,692 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:58:16,692 - INFO - Fetching feeds...
+2026-04-15 17:58:16,692 - INFO - Fetching category: security
+2026-04-15 17:58:16,692 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:58:19,186 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:58:22,124 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:58:24,499 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:58:27,299 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:58:29,954 - INFO - Fetched 50 items for security
+2026-04-15 17:58:29,954 - INFO - Fetching category: ai_research
+2026-04-15 17:58:29,954 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:58:33,115 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:58:36,131 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:58:36,131 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:58:36,131 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:58:38,594 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:58:41,264 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:58:41,264 - INFO - Filtering by keywords...
+2026-04-15 17:58:41,265 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:58:41,265 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:58:41,265 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:58:41,265 - INFO - Summarising with Claude API...
+2026-04-15 17:58:41,265 - INFO - Summarising security — 41 items
+2026-04-15 17:58:49,503 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:58:49,530 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:58:54,306 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:58:54,308 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:59:01,273 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:59:01,638 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:59:01,638 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:59:01,638 - INFO - Running initial pipeline now...
+2026-04-15 17:59:01,638 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:59:01,638 - INFO - Fetching feeds...
+2026-04-15 17:59:01,638 - INFO - Fetching category: security
+2026-04-15 17:59:01,638 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:59:04,709 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:59:07,681 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:59:09,981 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:59:12,870 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:59:15,575 - INFO - Fetched 50 items for security
+2026-04-15 17:59:15,576 - INFO - Fetching category: ai_research
+2026-04-15 17:59:15,576 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 17:59:18,716 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 17:59:21,650 - INFO - Fetched 20 items for ai_research
+2026-04-15 17:59:21,650 - INFO - Fetching category: bsv_bastion
+2026-04-15 17:59:21,650 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 17:59:23,948 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 17:59:26,631 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 17:59:26,631 - INFO - Filtering by keywords...
+2026-04-15 17:59:26,632 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 17:59:26,633 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 17:59:26,633 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 17:59:26,633 - INFO - Summarising with Claude API...
+2026-04-15 17:59:26,633 - INFO - Summarising security — 41 items
+2026-04-15 17:59:33,018 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:59:33,044 - INFO - Summarising ai_research — 19 items
+2026-04-15 17:59:38,653 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 17:59:38,655 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 17:59:44,175 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 17:59:44,542 - INFO - Intel pipeline scheduler started.
+2026-04-15 17:59:44,542 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 17:59:44,542 - INFO - Running initial pipeline now...
+2026-04-15 17:59:44,542 - INFO - Starting intel pipeline — AM run
+2026-04-15 17:59:44,542 - INFO - Fetching feeds...
+2026-04-15 17:59:44,542 - INFO - Fetching category: security
+2026-04-15 17:59:44,542 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 17:59:47,440 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 17:59:50,201 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 17:59:52,666 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 17:59:55,574 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 17:59:58,294 - INFO - Fetched 50 items for security
+2026-04-15 17:59:58,294 - INFO - Fetching category: ai_research
+2026-04-15 17:59:58,294 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 18:00:01,684 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 18:00:04,701 - INFO - Fetched 20 items for ai_research
+2026-04-15 18:00:04,701 - INFO - Fetching category: bsv_bastion
+2026-04-15 18:00:04,701 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 18:00:07,132 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 18:00:09,946 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 18:00:09,946 - INFO - Filtering by keywords...
+2026-04-15 18:00:09,947 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 18:00:09,948 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 18:00:09,949 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 18:00:09,949 - INFO - Summarising with Claude API...
+2026-04-15 18:00:09,949 - INFO - Summarising security — 41 items
+2026-04-15 18:00:18,796 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 18:00:18,820 - INFO - Summarising ai_research — 19 items
+2026-04-15 18:00:25,034 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 18:00:25,036 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 18:00:31,690 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 18:00:32,055 - INFO - Intel pipeline scheduler started.
+2026-04-15 18:00:32,055 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 18:00:32,055 - INFO - Running initial pipeline now...
+2026-04-15 18:00:32,055 - INFO - Starting intel pipeline — AM run
+2026-04-15 18:00:32,055 - INFO - Fetching feeds...
+2026-04-15 18:00:32,055 - INFO - Fetching category: security
+2026-04-15 18:00:32,055 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 18:00:34,519 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 18:00:37,326 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 18:00:39,640 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 18:00:42,559 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 18:00:45,198 - INFO - Fetched 50 items for security
+2026-04-15 18:00:45,198 - INFO - Fetching category: ai_research
+2026-04-15 18:00:45,198 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 18:00:48,373 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 18:00:51,187 - INFO - Fetched 20 items for ai_research
+2026-04-15 18:00:51,187 - INFO - Fetching category: bsv_bastion
+2026-04-15 18:00:51,187 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 18:00:53,680 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 18:00:56,284 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 18:00:56,284 - INFO - Filtering by keywords...
+2026-04-15 18:00:56,285 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 18:00:56,286 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 18:00:56,286 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 18:00:56,286 - INFO - Summarising with Claude API...
+2026-04-15 18:00:56,287 - INFO - Summarising security — 41 items
+2026-04-15 18:01:06,305 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 18:01:06,331 - INFO - Summarising ai_research — 19 items
+2026-04-15 18:01:12,139 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 18:01:12,141 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 18:01:18,488 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 18:01:18,867 - INFO - Intel pipeline scheduler started.
+2026-04-15 18:01:18,867 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 18:01:18,867 - INFO - Running initial pipeline now...
+2026-04-15 18:01:18,867 - INFO - Starting intel pipeline — AM run
+2026-04-15 18:01:18,867 - INFO - Fetching feeds...
+2026-04-15 18:01:18,867 - INFO - Fetching category: security
+2026-04-15 18:01:18,867 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 18:01:21,553 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 18:01:24,452 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 18:01:26,798 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 18:01:29,593 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 18:01:32,215 - INFO - Fetched 50 items for security
+2026-04-15 18:01:32,215 - INFO - Fetching category: ai_research
+2026-04-15 18:01:32,215 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 18:01:35,594 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 18:01:38,282 - INFO - Fetched 20 items for ai_research
+2026-04-15 18:01:38,282 - INFO - Fetching category: bsv_bastion
+2026-04-15 18:01:38,282 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 18:01:40,548 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 18:01:43,217 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 18:01:43,218 - INFO - Filtering by keywords...
+2026-04-15 18:01:43,218 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 18:01:43,219 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 18:01:43,219 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 18:01:43,219 - INFO - Summarising with Claude API...
+2026-04-15 18:01:43,219 - INFO - Summarising security — 41 items
+2026-04-15 18:01:51,259 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 18:01:51,285 - INFO - Summarising ai_research — 19 items
+2026-04-15 18:01:56,274 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 18:01:56,276 - INFO - Summarising bsv_bastion — 7 items
+2026-04-15 18:02:02,726 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Traceback (most recent call last):
+  File "/Users/leighton/Documents/Projects/intel-pipeline/scheduler.py", line 30, in <module>
+    run_pipeline("AM")
+    ~~~~~~~~~~~~^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 106, in run_pipeline
+    save_report(report, period)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/leighton/Documents/Projects/intel-pipeline/pipeline.py", line 69, in save_report
+    os.makedirs("reports", exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 236, in makedirs
+OSError: [Errno 30] Read-only file system: 'reports'
+2026-04-15 18:02:03,098 - INFO - Intel pipeline scheduler started.
+2026-04-15 18:02:03,098 - INFO - Scheduled: 07:00 AM and 19:00 PM daily.
+2026-04-15 18:02:03,098 - INFO - Running initial pipeline now...
+2026-04-15 18:02:03,098 - INFO - Starting intel pipeline — AM run
+2026-04-15 18:02:03,098 - INFO - Fetching feeds...
+2026-04-15 18:02:03,098 - INFO - Fetching category: security
+2026-04-15 18:02:03,099 - INFO - Fetching feed: https://krebsonsecurity.com/feed/
+2026-04-15 18:02:05,649 - INFO - Fetching feed: https://feeds.feedburner.com/TheHackersNews
+2026-04-15 18:02:08,574 - INFO - Fetching feed: https://www.bleepingcomputer.com/feed/
+2026-04-15 18:02:11,004 - INFO - Fetching feed: https://www.darkreading.com/rss.xml
+2026-04-15 18:02:14,088 - INFO - Fetching feed: https://www.securityweek.com/feed/
+2026-04-15 18:02:16,760 - INFO - Fetched 50 items for security
+2026-04-15 18:02:16,760 - INFO - Fetching category: ai_research
+2026-04-15 18:02:16,761 - INFO - Fetching feed: https://arxiv.org/rss/cs.AI
+2026-04-15 18:02:19,916 - INFO - Fetching feed: https://arxiv.org/rss/cs.CR
+2026-04-15 18:02:22,798 - INFO - Fetched 20 items for ai_research
+2026-04-15 18:02:22,799 - INFO - Fetching category: bsv_bastion
+2026-04-15 18:02:22,799 - INFO - Fetching feed: https://coingeek.com/feed/
+2026-04-15 18:02:25,181 - INFO - Fetching feed: https://bitcoinsv.io/feed/
+2026-04-15 18:02:27,955 - INFO - Fetched 10 items for bsv_bastion
+2026-04-15 18:02:27,955 - INFO - Filtering by keywords...
+2026-04-15 18:02:27,955 - INFO - security: 50 fetched → 41 relevant
+2026-04-15 18:02:27,956 - INFO - ai_research: 20 fetched → 19 relevant
+2026-04-15 18:02:27,956 - INFO - bsv_bastion: 10 fetched → 7 relevant
+2026-04-15 18:02:27,956 - INFO - Summarising with Claude API...
+2026-04-15 18:02:27,956 - INFO - Summarising security — 41 items
+2026-04-15 18:02:37,479 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 18:02:37,502 - INFO - Summarising ai_research — 19 items
+2026-04-15 18:02:43,681 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-15 18:02:43,683 - INFO - Summarising bsv_bastion — 7 items

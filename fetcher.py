@@ -13,6 +13,7 @@ WHITELISTED_DOMAINS = [
     "krebsonsecurity.com",
     "bleepingcomputer.com",
     "thehackernews.com",
+    "feedburner.com",
     "sans.org",
     "arxiv.org",
     "github.com",
