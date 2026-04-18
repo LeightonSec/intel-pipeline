@@ -20,7 +20,7 @@ def save_seen_urls(seen: dict):
     with open(SEEN_FILE, "w") as f:
         json.dump(seen, f, indent=2)
 
-def clean_old_urls(seen: dict, days: int = 7) -> dict:
+def clean_old_urls(seen: dict, days: int = 1) -> dict:
     """Remove URLs older than X days to prevent file growing forever"""
     cutoff = (datetime.utcnow() - timedelta(days=days)).isoformat()
     return {url: date for url, date in seen.items() if date > cutoff}
