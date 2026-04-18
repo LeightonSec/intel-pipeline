@@ -4,54 +4,16 @@ from bs4 import BeautifulSoup
 import time
 import logging
 from urllib.parse import urlparse
+from config_loader import load_config, get_feeds, get_whitelist
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# Whitelisted domains - only fetch from approved sources
-WHITELISTED_DOMAINS = [
-    "krebsonsecurity.com",
-    "bleepingcomputer.com",
-    "thehackernews.com",
-    "feedburner.com",
-    "sans.org",
-    "arxiv.org",
-    "github.com",
-    "threatpost.com",
-    "darkreading.com",
-    "securityweek.com",
-    "coingeek.com",
-    "bitcoinsv.io",
-    "bsvblockchain.org",
-    "cisa.gov",
-    "us-cert.cisa.gov",
-    "exploit-db.com",
-    "nvd.nist.gov"
-]
 
-# RSS feed sources
-RSS_FEEDS = {
-    "security": [
-        "https://krebsonsecurity.com/feed/",
-        "https://feeds.feedburner.com/TheHackersNews",
-        "https://www.bleepingcomputer.com/feed/",
-        "https://www.darkreading.com/rss.xml",
-        "https://www.securityweek.com/feed/"
-    ],
-    "ai_research": [
-        "https://arxiv.org/rss/cs.AI",
-        "https://arxiv.org/rss/cs.CR"
-    ],
-    "bsv_bastion": [
-        "https://coingeek.com/feed/",
-        "https://bitcoinsv.io/feed/"
-    ],
-    "cve": [
-        "https://www.cisa.gov/uscert/ncas/alerts.xml",
-        "https://www.cisa.gov/uscert/ncas/current-activity.xml",
-        "https://www.exploit-db.com/rss.xml"
-    ]
-}
+# Load config from sources.yaml
+_config = load_config()
+WHITELISTED_DOMAINS = get_whitelist(_config)
+RSS_FEEDS = get_feeds(_config)
 
 RATE_LIMIT_SECONDS = 2  # Wait between requests
 

@@ -1,0 +1,60 @@
+feeds:
+  security:
+    - https://krebsonsecurity.com/feed/
+    - https://feeds.feedburner.com/TheHackersNews
+    - https://www.bleepingcomputer.com/feed/
+    - https://www.darkreading.com/rss.xml
+    - https://www.securityweek.com/feed/
+  ai_research:
+    - https://arxiv.org/rss/cs.AI
+    - https://arxiv.org/rss/cs.CR
+  bsv_bastion:
+    - https://coingeek.com/feed/
+    - https://bitcoinsv.io/feed/
+  cve:
+    - https://www.cisa.gov/uscert/ncas/alerts.xml
+    - https://www.cisa.gov/uscert/ncas/current-activity.xml
+    - https://www.exploit-db.com/rss.xml
+whitelist:
+  - krebsonsecurity.com
+  - thehackernews.com
+  - feedburner.com
+  - bleepingcomputer.com
+  - darkreading.com
+  - securityweek.com
+  - arxiv.org
+  - coingeek.com
+  - bitcoinsv.io
+  - cisa.gov
+  - exploit-db.com
+keywords:
+  security:
+    - vulnerability
+    - exploit
+    - ransomware
+    - CVE
+    - malware
+    - phishing
+    - breach
+    - cybersecurity
+    - SOC
+    - threat intelligence
+  ai:
+    - AI
+    - LLM
+    - machine learning
+    - Claude
+    - GPT
+    - agentic
+  bastion:
+    - BSV
+    - Bitcoin SV
+    - Bastion
+    - blockchain
+    - post-quantum
+    - cryptography
+schedule:
+  morning: "07:00"
+  evening: "19:00"
+  dedup_days: 1
+  max_items_per_feed: 10
