@@ -22,7 +22,7 @@ def is_whitelisted(url: str) -> bool:
     try:
         domain = urlparse(url).netloc.replace("www.", "")
         return any(domain.endswith(w) for w in WHITELISTED_DOMAINS)
-    except:
+    except Exception:
         return False
 
 def fetch_rss_feed(feed_url: str, max_items: int = 10) -> list:
@@ -46,7 +46,6 @@ def fetch_rss_feed(feed_url: str, max_items: int = 10) -> list:
             }
             items.append(item)
 
-        time.sleep(RATE_LIMIT_SECONDS)
         return items
 
     except Exception as e:
@@ -66,6 +65,7 @@ def fetch_all_feeds(custom_feeds: list = None) -> dict:
         items = []
         for url in feed_urls:
             items.extend(fetch_rss_feed(url))
+            time.sleep(RATE_LIMIT_SECONDS)
         all_items[category] = items
         logger.info(f"Fetched {len(items)} items for {category}")
 

@@ -9,7 +9,7 @@ A personal intelligence pipeline that automatically monitors security news, AI r
 | Area | Detail |
 |---|---|
 | **Python** | Modular design, file I/O, scheduling, API integration, RSS parsing |
-| **Security Engineering** | Domain whitelisting, prompt injection hardening, rate limiting, secrets management |
+| **Security Engineering** | Domain whitelisting, rate limiting, secrets management, prompt injection mitigation |
 | **Threat Intelligence** | Multi-source ingestion, keyword filtering, CVE/vulnerability feed monitoring |
 | **AI Integration** | Claude API (Anthropic) for automated summarisation with hardened system prompts |
 | **Automation** | Launchd scheduling, deduplication logic, Obsidian vault integration |
@@ -29,7 +29,7 @@ Staying on top of the threat landscape, AI developments and niche research areas
 - **Multi-source ingestion** — security news, AI research papers, BSV/blockchain feeds
 - **Keyword filtering** — only surfaces content relevant to your defined interests
 - **Claude API summarisation** — each item summarised with: what happened, why it matters, action items
-- **Prompt injection protection** — system prompt hardened against malicious RSS content
+- **Prompt injection mitigation** — system prompt instructs the model to ignore instructions embedded in article content; not a guarantee, but reduces risk from malicious RSS entries
 - **Domain whitelist** — only fetches from approved, trusted sources
 - **Rate limiting** — respectful scraping, no hammering of external sites
 - **Obsidian integration** — reports drop directly into your vault inbox as structured Markdown
@@ -51,7 +51,7 @@ Each item includes a one sentence summary, why it matters, and action items wher
 - Reports excluded from GitHub via `.gitignore`
 - Domain whitelist prevents fetching from untrusted sources
 - Rate limiting between requests prevents abusive scraping
-- Claude system prompt hardened against prompt injection from RSS content
+- Claude system prompt instructs the model to ignore instructions in article content — a soft mitigation, not a robust defence against prompt injection
 - Outbound only — nothing external can reach your Obsidian vault
 
 ---

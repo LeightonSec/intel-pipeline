@@ -30,7 +30,7 @@ def summarise_all(categorised_items: dict) -> dict:
     try:
         response = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=800,
+            max_tokens=2500,
             system=SYSTEM_PROMPT,
             messages=[{
                 "role": "user",
@@ -55,8 +55,8 @@ def summarise_all(categorised_items: dict) -> dict:
             if k in parsed:
                 summaries[k] = parsed[k]
     except (json.JSONDecodeError, KeyError):
-        logger.warning("JSON parse failed — using raw output for first category")
-        first = next(iter(non_empty))
-        summaries[first] = raw
+        logger.error(f"JSON parse failed — raw output: {raw}")
+        for k in non_empty:
+            summaries[k] = raw
 
     return summaries

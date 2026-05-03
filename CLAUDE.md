@@ -32,11 +32,10 @@ twice daily. Built as part of the LeightonSec SOC Toolkit.
 ✅ Obsidian inbox delivery
 ✅ launchd auto-scheduler via run.sh wrapper
 ⚠️ arxiv AI research feed returning 0 items — needs investigation
-🔄 v2 multi-agent LangGraph architecture — designed, not yet integrated
 
 ## Next Steps
 - [ ] Fix arxiv feed returning 0 items
-- [ ] Build v2 multi-agent pipeline (pipeline_v2.py) — LangGraph, 6 agents
+- [ ] Build v2 multi-agent pipeline — LangGraph, 6 agents (see v2 Architecture below)
 - [ ] Add feedback loop — rate articles, pipeline learns from ratings
 - [ ] Slack/email alert for critical HIGH severity items
 - [ ] Integration with Unified Dashboard

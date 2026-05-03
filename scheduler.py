@@ -28,10 +28,6 @@ if __name__ == "__main__":
     logger.info("Intel pipeline scheduler started.")
     logger.info("Scheduled: 07:00 AM and 19:00 PM daily.")
     
-    # Run immediately on start for testing
-    logger.info("Running initial pipeline now...")
-    run_pipeline("AM")
-    
     while True:
         schedule.run_pending()
         time.sleep(60)
