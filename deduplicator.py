@@ -1,6 +1,6 @@
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 SEEN_FILE = "logs/seen_urls.json"
 
@@ -11,7 +11,7 @@ def load_seen_urls() -> dict:
     try:
         with open(SEEN_FILE, "r") as f:
             return json.load(f)
-    except:
+    except (json.JSONDecodeError, OSError):
         return {}
 
 def save_seen_urls(seen: dict):
@@ -22,7 +22,7 @@ def save_seen_urls(seen: dict):
 
 def clean_old_urls(seen: dict, days: int = 7) -> dict:
     """Remove URLs older than X days to prevent file growing forever"""
-    cutoff = (datetime.utcnow() - timedelta(days=days)).isoformat()
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
     return {url: date for url, date in seen.items() if date > cutoff}
 
 def filter_new_items(items: list, session_seen: set = None) -> list:
@@ -38,7 +38,7 @@ def filter_new_items(items: list, session_seen: set = None) -> list:
     persistent_seen = clean_old_urls(persistent_seen)
 
     new_items = []
-    now = datetime.utcnow().isoformat()
+    now = datetime.now(timezone.utc).isoformat()
 
     for item in items:
         url = item.get("link", "")

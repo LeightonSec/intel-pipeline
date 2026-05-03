@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 import json
 import pytest
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from unittest.mock import patch, MagicMock
 
 from deduplicator import filter_new_items, clean_old_urls
@@ -39,7 +39,7 @@ class TestDeduplicatorFiltering:
 
     def test_persistent_seen_url_is_filtered(self):
         url = "https://example.com/old"
-        seen = {url: datetime.utcnow().isoformat()}
+        seen = {url: datetime.now(timezone.utc).isoformat()}
         items = [_item(link=url), _item(link="https://example.com/new")]
         with patch("deduplicator.load_seen_urls", return_value=seen), \
              patch("deduplicator.save_seen_urls"):
@@ -78,20 +78,20 @@ class TestDeduplicatorFiltering:
 
 class TestDeduplicatorExpiry:
     def test_url_older_than_window_is_removed(self):
-        old = (datetime.utcnow() - timedelta(days=8)).isoformat()
+        old = (datetime.now(timezone.utc) - timedelta(days=8)).isoformat()
         seen = {"https://example.com/old": old}
         result = clean_old_urls(seen, days=7)
         assert "https://example.com/old" not in result
 
     def test_url_within_window_is_kept(self):
-        recent = (datetime.utcnow() - timedelta(days=3)).isoformat()
+        recent = (datetime.now(timezone.utc) - timedelta(days=3)).isoformat()
         seen = {"https://example.com/recent": recent}
         result = clean_old_urls(seen, days=7)
         assert "https://example.com/recent" in result
 
     def test_url_exactly_on_boundary_is_removed(self):
         # A URL timestamped exactly 7 days ago falls before the cutoff.
-        boundary = (datetime.utcnow() - timedelta(days=7, seconds=1)).isoformat()
+        boundary = (datetime.now(timezone.utc) - timedelta(days=7, seconds=1)).isoformat()
         seen = {"https://example.com/boundary": boundary}
         result = clean_old_urls(seen, days=7)
         assert "https://example.com/boundary" not in result
@@ -100,8 +100,8 @@ class TestDeduplicatorExpiry:
         assert clean_old_urls({}, days=7) == {}
 
     def test_mixed_ages_only_keeps_recent(self):
-        old = (datetime.utcnow() - timedelta(days=10)).isoformat()
-        fresh = datetime.utcnow().isoformat()
+        old = (datetime.now(timezone.utc) - timedelta(days=10)).isoformat()
+        fresh = datetime.now(timezone.utc).isoformat()
         seen = {"https://example.com/old": old, "https://example.com/fresh": fresh}
         result = clean_old_urls(seen, days=7)
         assert list(result.keys()) == ["https://example.com/fresh"]
