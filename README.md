@@ -124,7 +124,7 @@ intel-pipeline/
 
 ## Author
 
-**Leighton Wilson** — SOC Analyst | LeightonSec
+**Leighton Wilson** — Security Researcher | LeightonSec
 [LeightonSec GitHub](https://github.com/LeightonSec)
 
 ---
