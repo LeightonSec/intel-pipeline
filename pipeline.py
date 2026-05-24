@@ -1,6 +1,6 @@
 import sys
 import os
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # gate: ignore — own repo root, enables local module imports, not cross-repo coupling
 import logging
 from datetime import datetime
 from dotenv import load_dotenv

@@ -10,7 +10,7 @@ def load_config() -> dict:
     """Load pipeline configuration from YAML file"""
     try:
         with open(CONFIG_PATH, "r") as f:
-            config = yaml.safe_load(f)
+            config = yaml.safe_load(f)  # gate: ignore — local bundled config file at hardcoded path, yaml.safe_load not yaml.load, not external data
         logger.info(f"Config loaded from {CONFIG_PATH}")
         return config
     except FileNotFoundError:

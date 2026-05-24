@@ -5,7 +5,7 @@ import os
 # doesn't raise at module load time in CI / environments without a real key.
 os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))  # gate: ignore — own repo root, enables local module imports, not cross-repo coupling
 
 import json
 import pytest

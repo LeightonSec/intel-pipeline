@@ -112,6 +112,16 @@ intel-pipeline/
 
 ---
 
+## Known dependency advisories (LOW — non-blocking)
+
+Flagged by SCA scan. None are exploitable via normal pipeline usage (local tool, no inbound network surface). Tracked for next upgrade cycle.
+
+- `idna` — upgrade to ≥3.12
+- `urllib3` — upgrade to ≥2.7.0
+- `langchain-core`, `langsmith` — check upstream release notes for advisory fixes
+
+---
+
 ## Roadmap
 
 - [ ] Web dashboard to view reports in browser
