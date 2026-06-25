@@ -1,0 +1,16 @@
+# Direct dependencies for intel-pipeline.
+# Compiled to the hash-locked requirements.txt with:
+#   uv pip compile requirements.in --universal --python-version 3.10 --generate-hashes -o requirements.txt
+# Compiled on the CI matrix FLOOR (3.10) so the lock installs across 3.10-3.12.
+#
+# NOTE: langgraph/langchain-core were removed. They were staged for the
+# unbuilt v2 multi-agent pipeline, imported nowhere in source, and carried
+# four HIGH CVEs (langchain-core + transitive langsmith). Re-add here when the
+# v2 LangGraph work actually starts.
+anthropic
+beautifulsoup4
+feedparser
+python-dotenv
+pyyaml
+requests
+schedule

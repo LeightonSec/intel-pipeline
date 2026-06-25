@@ -1,11 +1,14 @@
-import sys
 import os
+import sys
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # gate: ignore — own repo root, enables local module imports, not cross-repo coupling
 import logging
 from datetime import datetime
+
 from dotenv import load_dotenv
-from fetcher import fetch_all_feeds, filter_by_keywords
+
 from deduplicator import filter_new_items
+from fetcher import fetch_all_feeds, filter_by_keywords
 from summariser import summarise_all
 
 load_dotenv()

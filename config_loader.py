@@ -1,6 +1,7 @@
-import yaml
-import os
 import logging
+import os
+
+import yaml
 
 logger = logging.getLogger(__name__)
 
@@ -9,7 +10,7 @@ CONFIG_PATH = os.path.join(os.path.dirname(__file__), "config", "sources.yaml")
 def load_config() -> dict:
     """Load pipeline configuration from YAML file"""
     try:
-        with open(CONFIG_PATH, "r") as f:
+        with open(CONFIG_PATH) as f:
             config = yaml.safe_load(f)  # gate: ignore — local bundled config file at hardcoded path, yaml.safe_load not yaml.load, not external data
         logger.info(f"Config loaded from {CONFIG_PATH}")
         return config

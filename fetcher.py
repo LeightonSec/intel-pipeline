@@ -1,8 +1,10 @@
-import feedparser
-import time
 import logging
+import time
 from urllib.parse import urlparse
-from config_loader import load_config, get_feeds, get_whitelist
+
+import feedparser
+
+from config_loader import get_feeds, get_whitelist, load_config
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -16,10 +18,19 @@ RSS_FEEDS = get_feeds(_config)
 RATE_LIMIT_SECONDS = 2  # Wait between requests
 
 def is_whitelisted(url: str) -> bool:
-    """Check if URL domain is in whitelist"""
+    """Check if a URL's host is in the whitelist.
+
+    Matches each whitelisted domain on an exact-or-subdomain basis:
+    ``host == domain`` or ``host`` ends with ``.domain``. A bare
+    ``endswith(domain)`` is unsafe: it treats ``notexample.com`` and
+    ``evil-example.com`` as matching ``example.com`` (domain-suffix
+    confusion), which bypasses the feed whitelist. ``www.`` is stripped only
+    as a leading prefix, not anywhere in the string.
+    """
     try:
-        domain = urlparse(url).netloc.replace("www.", "")
-        return any(domain.endswith(w) for w in WHITELISTED_DOMAINS)
+        netloc = urlparse(url).netloc
+        host = netloc[4:] if netloc.startswith("www.") else netloc
+        return any(host == w or host.endswith("." + w) for w in WHITELISTED_DOMAINS)
     except Exception:
         return False
 

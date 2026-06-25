@@ -1,5 +1,5 @@
-import sys
 import os
+import sys
 
 # Set a dummy API key before summariser is imported so the Anthropic client
 # doesn't raise at module load time in CI / environments without a real key.
@@ -8,14 +8,12 @@ os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))  # gate: ignore — own repo root, enables local module imports, not cross-repo coupling
 
 import json
-import pytest
 from datetime import datetime, timedelta, timezone
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 
-from deduplicator import filter_new_items, clean_old_urls
+from deduplicator import clean_old_urls, filter_new_items
 from fetcher import filter_by_keywords, is_whitelisted
 from summariser import summarise_all
-
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -233,13 +231,13 @@ class TestIsWhitelisted:
         with patch("fetcher.WHITELISTED_DOMAINS", ["example.com"]):
             assert is_whitelisted("https://feeds.example.com/rss") is True
 
-    def test_domain_that_only_ends_with_string_is_blocked(self):
-        # "notexample.com" ends with "example.com" — this is a known
-        # limitation of the endswith check, not a bug we're introducing.
-        # Test documents current behaviour rather than asserting it's blocked.
+    def test_suffix_confusion_domain_is_blocked(self):
+        # "notexample.com"/"evil-example.com" end with "example.com" but are
+        # NOT subdomains of it; a bare endswith check would let them bypass
+        # the whitelist (domain-suffix confusion). They must be rejected.
         with patch("fetcher.WHITELISTED_DOMAINS", ["example.com"]):
-            result = is_whitelisted("https://notexample.com/feed")
-        assert isinstance(result, bool)
+            assert is_whitelisted("https://notexample.com/feed") is False
+            assert is_whitelisted("https://evil-example.com/feed") is False
 
     def test_empty_whitelist_blocks_everything(self):
         with patch("fetcher.WHITELISTED_DOMAINS", []):

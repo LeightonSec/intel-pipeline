@@ -1,9 +1,12 @@
-import sys
 import os
+import sys
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # gate: ignore — own repo root, enables local module imports, not cross-repo coupling
-import schedule
-import time
 import logging
+import time
+
+import schedule
+
 from pipeline import run_pipeline
 
 logging.basicConfig(
@@ -27,7 +30,7 @@ schedule.every().day.at("19:00").do(evening_run)
 if __name__ == "__main__":
     logger.info("Intel pipeline scheduler started.")
     logger.info("Scheduled: 07:00 AM and 19:00 PM daily.")
-    
+
     while True:
         schedule.run_pending()
         time.sleep(60)

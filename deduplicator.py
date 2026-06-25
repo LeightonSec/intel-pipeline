@@ -9,7 +9,7 @@ def load_seen_urls() -> dict:
     if not os.path.exists(SEEN_FILE):
         return {}
     try:
-        with open(SEEN_FILE, "r") as f:
+        with open(SEEN_FILE) as f:
             return json.load(f)
     except (json.JSONDecodeError, OSError):
         return {}
@@ -33,7 +33,7 @@ def filter_new_items(items: list, session_seen: set = None) -> list:
     """
     if session_seen is None:
         session_seen = set()
-        
+
     persistent_seen = load_seen_urls()
     persistent_seen = clean_old_urls(persistent_seen)
 
@@ -49,4 +49,4 @@ def filter_new_items(items: list, session_seen: set = None) -> list:
 
     save_seen_urls(persistent_seen)
     return new_items
-    
+
